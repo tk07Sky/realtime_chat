@@ -1,0 +1,150 @@
+html,body{
+    height: calc(100% - 4em);
+    font-family: "HiraginoKakuGothic Pro", "メイリオ", sans-serif;
+}
+body{
+    background-color: #FFFED5; 
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+.panel-default{
+    height: 100%;
+}
+#scroller {
+    height: 100%;
+    background-color: #FFFED5;
+    overflow: auto;
+}
+.panel-default .panel-heading{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #FF9633;
+    color: white;
+    z-index: 999;
+}
+.head-space {
+    height: 60px;
+}
+button[type="button"]{
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    background-color: #f99f4b;
+    border: solid 2px #f6660a;
+    border-radius: 10px;
+    padding: 5px;
+}
+button[type="button"]:hover {
+    background-color: #f6660a;
+}
+.panel-footer{
+    position: fixed;
+    background-color: #FF9633;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+/*******************************
+* 左からの吹き出し
+********************************/
+.left_balloon {
+    position: relative;
+    background: white;
+    border: 0px solid #777;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+    clear: both;
+    word-wrap: break-word;
+}
+
+/*******************************
+* 右からの吹き出し
+********************************/
+.right_balloon {
+    color: #fff;
+    position: relative;
+    background: #FF9633;
+    border: 0px solid #f4851c;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+    clear: both;
+    float: right;
+    word-wrap: break-word;
+}
+
+/*******************************
+* 割り込みを解除
+********************************/
+.clear_balloon{
+  clear: both;
+}
+
+.sender_name{
+    margin-bottom: -5px;
+    padding-left: 20px;
+    color: rgba(0, 0, 0, .40);
+}
+.sender_name.me{
+    float: right;
+    padding: 0 20px 0 0;
+}
+
+/* 以下メディアクエリ */
+@media (max-width: 350px){
+    h1{
+        font-size: 22px;
+    }
+    button[type="button"]{
+        top: 45px;
+    }
+    .panel-default .panel-heading{
+        height: 90px;
+    }
+    .head-space {
+        height: 90px;
+    }
+    #scroller{
+        height: calc(100% - 2em);
+    }
+}
+@media (min-width: 351px) and (max-width: 599px){
+    h1{
+        font-size: 25px;
+    }
+    button[type="button"]{
+        top: 45px;
+        right: 25px;
+    }
+    .panel-default .panel-heading{
+        height: 90px;
+    }
+    .head-space {
+        height: 90px;
+    }
+    #scroller{
+        height: calc(100% - 2em);
+    }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+
+}
